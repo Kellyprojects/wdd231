@@ -1,0 +1,45 @@
+{
+    "members": [
+        {
+            "name": "Lagos Tech Solutions",
+            "level": "Gold",
+            "phone": "+234 123 456 7890",
+            "address": "15 Marina Street, Lagos Island",
+            "website": "https://lagostech.example.com",
+            "logo": "https://via.placeholder.com/150x150.png?text=Tech+Solutions"
+        },
+        {
+            "name": "Coastal Imports Ltd",
+            "level": "Silver",
+            "phone": "+234 098 765 4321",
+            "address": "25 Port Complex Road, Apapa",
+            "website": "https://coastal-imports.example.com",
+            "logo": "https://via.placeholder.com/150x150.png?text=Coastal+Imports"
+        },
+        {
+            "name": "Green Energy Nigeria",
+            "level": "Gold",
+            "phone": "+234 111 222 3333",
+            "address": "7 Victoria Island Drive",
+            "website": "https://green-energy.example.com",
+            "logo": "https://via.placeholder.com/150x150.png?text=Green+Energy"
+        },
+        {
+            "name": "Lagos Financial Group",
+            "level": "Gold",
+            "phone": "+234 444 555 6666",
+            "address": "30 Broad Street, Lagos Island",
+            "website": "https://lagos-financial.example.com",
+            "logo": "https://via.placeholder.com/150x150.png?text=Financial+Group"
+        },
+        {
+            "name": "Unity Manufacturing Co",
+            "level": "Silver",
+            "phone": "+234 777 888 9999",
+            "address": "12 Industrial Avenue, Ilupeju",
+            "website": "https://unity-mfg.example.com",
+            "logo": "https://via.placeholder.com/150x150.png?text=Unity+Mfg"
+        }
+    ]
+}
+

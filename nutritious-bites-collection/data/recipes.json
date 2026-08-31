@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Vegetarian Pasta",
+        "description": "A delicious vegetarian pasta recipe.",
+        "type": "vegetarian",
+        "image": "images/vegetarian-pasta.jpg"
+    },
+    {
+        "title": "Gluten-Free Bread",
+        "description": "Light and fluffy bread without gluten.",
+        "type": "gluten-free",
+        "image": "images/gluten-free.jpeg"
+    }
+]

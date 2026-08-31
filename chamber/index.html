@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lagos Chamber of Commerce - Your Access Point for Professional Connections. Become a part of our community to engage, expand, and thrive.">
+    <meta name="author" content="Emmanuel Kelikume">
+    <meta property="og:title" content="Lagos Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/logo.png">
+    <meta property="og:url" content="index.html">
+    <title>Lagos Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Lagos Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-overlay"></div>
+            <img src="images/Lagos-skyline.jpg" alt="Lagos City Skyline" class="hero-image">
+            <div class="hero-text">
+                <h2>Your Pathway to Professional Success in Lagos</h2>
+                <p>Join Lagos's premier business network and unlock opportunities for growth, networking, and business development.</p>
+                <div class="cta-container">
+                    <a href="join.html" class="cta-button">Join the Chamber Today</a>
+                    <a href="discover.html" class="secondary-cta">Discover More</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <!-- Current Events Section -->
+            <section id="events" class="card">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li><strong>Business Exhibition 2025:</strong> May 25th, 2025</li>
+                    <li><strong>Business Connections Event:</strong> June 17th, 2025</li>
+                </ul>
+                <a href="events.html" class="secondary-cta">View All Events</a>
+            </section>
+
+            <!-- Weather Section -->
+            <section id="weather" class="card">
+                <h3>Weather Information</h3>
+                <div id="current-weather">
+                    <p>Loading current weather...</p>
+                </div>
+            </section>
+
+            <!-- Spotlight Section -->
+            <section id="spotlight" class="card">
+                <h3>Member Spotlights</h3>
+                <div id="spotlight-cards">
+                    <!-- Spotlight cards will be dynamically generated here -->
+                </div>
+                <a href="directory.html" class="secondary-cta">View All Members</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+            <p>Developed by Emmanuel Kelikume, WDD231</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlight.js"></script>
+    <script>
+        // Update copyright year and last modified date
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+
+        // Add active class to current page link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelector(`nav a[href="${currentPage}"]`)?.classList.add('active');
+        });
+    </script>
+</body>
+
+</html>
+
+

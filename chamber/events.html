@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore upcoming events and networking chances with the Lagos Chamber of Commerce.">
+    <meta name="author" content="Emmanuel Kelikume">
+    <meta property="og:title" content="Events - Lagos Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:url" content="events.html">
+    <title>Events - Lagos Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="events-list">
+            <article>
+                <h3>Business Networking Mixer</h3>
+                <p>Date: May 27, 2025</p>
+                <p>Location: Eko Convention Centre</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Emmanuel Kelikume, WDD231</p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" Nutritious Bites Collection - This platform is dedicated to featuring a variety of wholesome recipes.">
+    <meta name="author" content="Emmanuel Kelikume">
+    <meta property="og:title" content="Nutritious Bites Collection">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:url" content="https://Emmanuelkelly29.github.io/wdd231/nutritious-bites_collection/contact.html">
+    <title>Contact us - Nutritious Bites Collection</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Nutritious Bites Collection</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Emmanuel Kelikume, WDD231</p>
+        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+    <script src="scripts/form.js"></script>
+</body>
+</html>

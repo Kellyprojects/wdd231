@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploring opportunities with the Lagos Chamber of Commerce.">
+    <meta name="author" content="Emmanuel Kelikume">
+    <meta property="og:title" content="discovery - Lagos Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:url" content="https://Emmanuelkelly29.github.io/wdd231/chamber/discover.html">
+    <title>Discovery - Lagos Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/discovery.js" defer></script>
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+ <header>
+    <div class="header-container">
+                <h1>Discover Chamber</h1>
+                </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+            <div class="sidebar-content">
+                <h3>Demographics</h3>
+                <ul>
+                    <li>Population: 750,000</li>
+                    <li>Median Age: 35 years</li>
+                    <li>Median Household Income: $60,000</li>
+                    <li>Average Education Level: College Graduate</li>
+                </ul>
+            </div>
+
+            <!-- Events Section -->
+            <div class="sidebar-content">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Annual Chamber Gala - March 14, 2025</li>
+                    <li>Business Networking Mixer - April 7, 2025</li>
+                    <li>Local Market Day - May 17, 2025</li>
+                </ul>
+            </div>
+
+            <!-- Attractions Section -->
+            <div class="sidebar-content">
+                <h3>Local Attractions</h3>
+                <ul>
+                    <li>Lekki Conservation Centre</li>
+                    <li>National Theatre</li>
+                    <li>Lagos Skyline</li>
+                    <li>Tafawa Balewa Square</li>
+                </ul>
+            </div>
+
+    
+                <!-- Main Content Section (Image Gallery) -->
+                <section class="main-content">
+                    <h2>Local Photos of Interest</h2>
+                    <div class="image-gallery">
+                        <!-- Six optimized images with lazy loading -->
+                        <img src="images/water.jpg" alt="Lagos Island" class="lazy-load" />
+                        <img src="images/Lagos-skyline.jpg" alt="Lagos Skyline" class="lazy-load" />
+                        <img src="images/lekki-conservation-centre.jpg" alt="Lekki Conservation Centre" class="lazy-load" />
+                        <img src="images/market.png" alt="Marke" class="lazy-load" />
+                        <img src="images/beach.jpg" alt="Oniru Beach" class="lazy-load" />
+                        <img src="images/train-station.jpg" alt="Ikeja Train Station" class="lazy-load" />
+                    </div>
+                </section>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Emmanuel Kelikume, WDD231</p>
+        
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

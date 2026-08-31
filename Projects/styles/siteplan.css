@@ -1,0 +1,57 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    color: #4CAF50;  /* Green for headings */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    background-color: #FFEB3B;  /* Yellow for hover effect */
+}
+
+/* Featured Recipes Section */
+.featured-recipes {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.featured-recipes img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #FFEB3B;
+    text-decoration: none;
+}
+
+

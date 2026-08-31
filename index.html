@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WDD 231 Course Home Page" />
+    <meta name="author" content="Emmanuel Kelikume" />
+    <title>WDD 231 - Course Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/profile.jpg" alt="Profile Picture" />
+      <span>Emmanuel Chinedu Kelikume</span>
+      <button id="menu-toggle">☰</button>
+    </header>
+    <nav>
+      <ul id="menu" class="hide">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="https://emmanuelkelly29.github.io/wdd231/chamber/index.html">Chamber</a></li>
+        <li><a href="https://github.com/emmanuelkelly29">GitHub Profile</a></li>
+        <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="home">Home</h1>
+      <div class="course-location">
+      <section class="course-work">
+        <h2 class="course-work--1">Course Work</h2>
+        
+        <ul>
+          <li>WDD231 - Frontend Development I</li>
+          <li>WDD131 - Dynamic Web Fundamentals</li>
+          <li>WDD130 - Web Fundamentals</li>
+          <li>CSE210 - Programming with Classes</li>
+          <li>CSE111 - Progamming with Functions</li>
+          <li>CSE110 - Intro to Programming</li>
+        </ul>
+      </section>
+      <section class="location">
+        <h2 class="location--1">Lagos, Nigeria</h2>
+        <img src="images/lagos.jpeg" alt="Lagos" />
+        <p>Lagos</p>
+      </div>
+      </section>
+      <section class="certificate">
+        <h2 class="certificate--1">Web and Computer Programming Certificate</h2>
+        <div class="filter-buttons">
+          <button id="all">All</button>
+          <button id="cse">CSE</button>
+          <button id="wdd">WDD</button>
+          <hr>
+        </div>
+        <div class="result-button">
+          <button>CSE 110</button>
+          <button>WDD 130</button>
+          <button>CSE 111</button>
+          <button>✔️ CSE 210</button>
+          <button>WDD 131</button>
+          <button>✔️ WDD 231</button>
+        </div>
+        <div class="courses">
+          <!-- JavaScript will populate course buttons here -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+      <p>
+        &copy; <span id="currentyear"></span> 🌺 Emmanuel Chinedu Kelikume 🌺
+        Nigeria
+      </p>
+      <img src="images/nigeria-flag.png" alt="Nigerian Flag"/>
+      </div>
+      <p id="lastModified">Last Update:</p>
+    </footer>
+  </body>
+</html>
+
