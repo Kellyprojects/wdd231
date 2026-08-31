@@ -2,195 +2,209 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 /* Small.css - Mobile-first styles */
-body {
-  font-family: "Roboto", sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   background-color: #f4f4f4;
+  color: #333;
   text-align: center;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+header img {
+  width: 60px;
+  height: 75px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+header span {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 #menu-toggle {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   color: white;
   cursor: pointer;
-  display: none;
+  display: block;
+}
+
+/* Mobile Navigation */
+nav {
+  background-color: #34495e;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  background-color: #34495e;
+  flex-direction: column;
 }
 
-nav ul li {
-  padding: 10px 20px;
+nav ul.hide {
+  display: none;
 }
 
 nav ul li a {
+  display: block;
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+  font-size: 16px;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s, background 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   color: yellow;
+  background-color: #164e70;
 }
 
 main {
-  padding: 20px;
+  padding: 15px;
+}
+
+.home {
+  color: #164e70;
+  text-align: left;
+  margin-bottom: 15px;
 }
 
 section {
   background: white;
   padding: 15px;
-  margin: 10px auto;
+  margin: 15px auto;
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  max-width: 100%;
 }
 
-/* Responsive Navigation for Mobile */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 70px;
-    padding-right: 17px;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul.show {
-    display: flex;
-  }
-  header {
-    background: #2c3e50;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-  header img {
-    width: 90px;
-    height: 110px;
-    margin-left: 40px;
-  }
-  header span {
-    font-size: 45px;
-  }
-  .home {
-    color: #164e70;
-    margin-right: 800px;
-  }
-  .course-work--1 {
-    margin: -15px -15px 0 -15px;
-    color: #fff;
-    background-color: #164e70;
-    height: 2.5rem;
-    border-radius: 8px 8px 0 0;
-    padding-top: 10px;
-    font-size: medium;
-  }
-  .course-work ul {
-    padding: 20px 0 0 15px;
-    text-align: left;
-  }
-  .location--1 {
-    margin: -15px -15px 0 -15px;
-    color: #fff;
-    background-color: #164e70;
-    height: 2.5rem;
-    border-radius: 8px 8px 0 0;
-    font-size: medium;
-    padding-top: 10px;
-    margin-bottom: 20px;
-  }
-  .certificate--1 {
-    margin: -15px -15px 0 -15px;
-    color: #fff;
-    background-color: #164e70;
-    height: 2.5rem;
-    border-radius: 8px 8px 0 0;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    font-size: medium;
-  }
-  .filter-buttons button {
-    background: #000;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    gap: 30px;
-    margin: 0 15px 10px 0;
-    width: 8rem;
-  }
-
-  .result-button {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    gap: 15px;
-    justify-content: stretch;
-  }
-
-  .result-button button {
-    background: #62321b;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 11px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .result-button button:nth-child(4),
-  .result-button button:nth-child(6) {
-    background: #e6eded;
-    color: black;
-  }
-
-  button:hover {
-    background: #0056b3;
-  }
-  footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .footer-content img {
-    width: 50px;
-    height: auto;
-  }
-
-  #lastModified {
-    margin-top: 5px;
-    font-size: 14px;
-  }
+.course-work--1,
+.location--1,
+.certificate--1 {
+  margin: -15px -15px 15px -15px;
+  color: #fff;
+  background-color: #164e70;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  font-size: 1.1rem;
 }
 
+.course-work ul {
+  padding-left: 20px;
+  text-align: left;
+}
 
+.course-work li {
+  padding: 4px 0;
+}
+
+.location img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-buttons button {
+  background: #164e70;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  flex: 1;
+  max-width: 100px;
+}
+
+.filter-buttons button:hover {
+  background: #0056b3;
+}
+
+#total-credits {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #164e70;
+  margin: 10px 0;
+}
+
+/* Dynamic Course List Grid for Mobile */
+.courses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.course-card {
+  background: #62321b;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.course-card.completed {
+  background: #e6eded;
+  color: black;
+  border: 1px solid #164e70;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-content img {
+  width: 40px;
+  height: auto;
+}
+
+#lastModified {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #f1c40f;
+}

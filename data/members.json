@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Lagos Tech Hub",
+    "address": "15 Marina Road, Lagos Island, Lagos",
+    "phone": "+234 800 123 4567",
+    "website": "https://www.lagostechhub.example.com",
+    "image": "images/member1.webp",
+    "membershipLevel": "Gold Level"
+  },
+  {
+    "name": "Naija Web Solutions",
+    "address": "42 Allen Avenue, Ikeja, Lagos",
+    "phone": "+234 801 234 5678",
+    "website": "https://www.naijaweb.example.com",
+    "image": "images/member2.webp",
+    "membershipLevel": "Silver Level"
+  },
+  {
+    "name": "Eko Logistics",
+    "address": "10 Apapa Expressway, Apapa, Lagos",
+    "phone": "+234 802 345 6789",
+    "website": "https://www.ekologistics.example.com",
+    "image": "images/member3.webp",
+    "membershipLevel": "Bronze Level"
+  },
+  {
+    "name": "Victoria Island Finance",
+    "address": "8 Adeola Odeku St, Victoria Island, Lagos",
+    "phone": "+234 803 456 7890",
+    "website": "https://www.vifinance.example.com",
+    "image": "images/member4.webp",
+    "membershipLevel": "Gold Level"
+  },
+  {
+    "name": "Lekki Retail Group",
+    "address": "Phase 1, Admiralty Way, Lekki, Lagos",
+    "phone": "+234 804 567 8901",
+    "website": "https://www.lekkiretail.example.com",
+    "image": "images/member5.webp",
+    "membershipLevel": "Silver Level"
+  },
+  {
+    "name": "Mainland Manufacturing",
+    "address": "Industrial Estate, Yaba, Lagos",
+    "phone": "+234 805 678 9012",
+    "website": "https://www.mainlandmfg.example.com",
+    "image": "images/member6.webp",
+    "membershipLevel": "Bronze Level"
+  },
+  {
+    "name": "Ikeja Hospitality",
+    "address": "22 Isaac John St, Ikeja GRA, Lagos",
+    "phone": "+234 806 789 0123",
+    "website": "https://www.ikejahospitality.example.com",
+    "image": "images/member7.webp",
+    "membershipLevel": "Gold Level"
+  }
+]

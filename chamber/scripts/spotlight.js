@@ -50,3 +50,4 @@ async function loadSpotlights() {
 
 // Load spotlights when the DOM is ready
 document.addEventListener('DOMContentLoaded', loadSpotlights);
+
