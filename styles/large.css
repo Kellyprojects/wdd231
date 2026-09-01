@@ -1,10 +1,4 @@
 /* Large.css - Desktop-specific styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 @media (min-width: 768px) {
   body {
     font-family: "Roboto", sans-serif;
