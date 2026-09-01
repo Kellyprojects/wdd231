@@ -5,15 +5,15 @@
   padding: 0;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
 @media (min-width: 768px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+
   header {
     display: flex;
     align-items: center;
@@ -53,11 +53,11 @@ body {
   }
 
   nav ul.hide {
-    display: flex; /* Keep menu visible on large screens */
+    display: flex;
   }
 
   #menu-toggle {
-    display: none; /* Hide hamburger menu on desktop */
+    display: none;
   }
 
   main {
@@ -148,7 +148,6 @@ body {
     color: #164e70;
   }
 
-  /* Dynamic Course Cards Grid */
   .courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -169,7 +168,6 @@ body {
     transition: background 0.3s;
   }
 
-  /* Style for completed courses */
   .course-card.completed {
     background: #e6eded;
     color: #000;
