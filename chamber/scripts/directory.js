@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const listViewBtn = document.getElementById("list-view-btn");
 
     if (memberList) {
-        const url = 'data/members.json';
+        // Updated path with explicit relative notation to prevent 404/empty fetch issues
+        const url = './data/members.json';
 
         async function getMembers() {
             try {
