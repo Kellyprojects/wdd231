@@ -1,7 +1,9 @@
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("hide");
-    menuToggle.textContent = menu.classList.contains("hide") ? "☰" : "❌";
-});
+if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hide");
+        menuToggle.textContent = menu.classList.contains("hide") ? "☰" : "✕";
+    });
+}
