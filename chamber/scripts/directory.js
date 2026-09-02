@@ -56,19 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (gridViewBtn && listViewBtn) {
             gridViewBtn.addEventListener("click", () => {
-                memberList.className = "grid";
+                memberList.classList.remove("list");
+                memberList.classList.add("grid");
             });
 
             listViewBtn.addEventListener("click", () => {
-                memberList.className = "list";
+                memberList.classList.remove("grid");
+                memberList.classList.add("list");
             });
         }
 
         getMembers();
     }
 });
-
-
-
-
-

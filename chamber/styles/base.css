@@ -27,16 +27,34 @@ header {
 }
 
 .header-content {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: 1rem;
     padding: 1rem;
-    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.header-content h1 {
-    margin: 0;
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     text-align: center;
+}
+
+.header-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
 }
 
 .menu-toggle {
@@ -54,6 +72,10 @@ header {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        left: auto;
     }
 }
 
@@ -86,6 +108,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: #ffcc00;
     background-color: #0056b3;
 }
 
@@ -145,96 +168,6 @@ nav ul li a.active {
     margin-bottom: 2rem;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 0.8rem;
-        width: 100%;
-    }
-
-    .hero-text {
-        padding: 1rem;
-    }
-
-    .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .header-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .content-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-
-    .card {
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 0.5rem;
-    }
-
-    button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .member-card img {
-        width: 100%;
-    }
-
-    #member-list.list .member-card img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .header-content h1 {
-        font-size: 1.2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-}
-
 h1, h2 {
     margin: 0.5rem;
 }
@@ -260,49 +193,99 @@ button:hover {
     margin: 1rem;
 }
 
-/* Grid and List View Styles */
-#member-list {
-    padding: 20px;
+/* Directory Page Specific Styles */
+.directory-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#member-list.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+.view-toggle {
+    display: flex;
+    justify-content: center;
     gap: 1rem;
+    margin: 2rem 0;
 }
 
-#member-list.list {
-    display: block;
+.view-toggle button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #005bb7;
+    border: 2px solid #005bb7;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-toggle button:hover,
+.view-toggle button.active {
+    background-color: #005bb7;
+    color: white;
+}
+
+.view-toggle button i {
+    font-size: 1.2rem;
 }
 
 /* Member Card Styles */
 .member-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
     text-align: center;
-    border-radius: 5px;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
 }
 
 .member-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    object-fit: cover;
 }
 
-/* List view styling */
+#member-list {
+    padding: 20px;
+}
+
+#member-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#member-list.list {
+    display: block;
+}
+
 #member-list.list .member-card {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 #member-list.list .member-card img {
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* Requirement for List View: Hide images completely as per rubric Outcome 10 */
+#member-list.list .member-card img {
+    display: none;
 }
 
 /* Form Styling */
@@ -336,160 +319,6 @@ input, textarea {
 main {
     flex: 1;
     padding: 20px;
-}
-
-/* Updated Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-    margin-top: auto;
-    width: 100%;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
-    }
-}
-
-.spotlight-card {
-    display: flex; /* Aligns the image and text side by side */
-    align-items: center; /* Centers the image and text vertically */
-    gap: 20px; /* Adds space between the image and text */
-    border: 1px solid #ddd; /* Optional: Adds a border around the card */
-    border-radius: 10px;
-    padding: 15px;
-    background-color: #f9f9f9; /* Optional: Background color for the card */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
-    margin-bottom: 20px; /* Adds space between cards */
-}
-
-.spotlight-card img {
-    max-width: 150px; /* Sets a fixed max width for the image */
-    height: auto;
-    border-radius: 8px;
-    object-fit: contain;
-}
-
-.spotlight-content {
-    flex: 1; /* Makes the content take up the remaining space */
-}
-
-.spotlight-content h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
-}
-
-.spotlight-content p {
-    margin: 5px 0;
-    line-height: 1.6;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    grid-column: 1 / 2; /* Sidebar takes the first column */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    font-size: 1.6em;
-}
-
-.sidebar-content {
-    margin-bottom: 1.5rem;
-}
-
-/* Main Content Styles */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Sidebar on the left, main content on the right */
-    gap: 20px;
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
-    }
-}
-
-/* Image Gallery Styles */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-}
-
-.image-gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Lazy Load */
-img[data-src] {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-img[data-src].loaded {
-    opacity: 1;
-}
-
-/* Hover Effect for Images */
-.image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    margin-top: auto;
-}
-
-/* Media Queries for Small Screens */
-@media (max-width: 768px) {
-    /* Mobile View for Sidebar */
-    .sidebar {
-        grid-column: 1; /* Make sidebar take up full width */
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Lazy Load Styling */
-img[data-src] {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* When the image has finished loading */
-img[data-src].loaded {
-    opacity: 1;
-}
-
-/* Navigation links inside the header */
-header nav a {
-    color: #fff; /* Set the navigation links to white */
-    padding: 0.5rem;
-    text-decoration: none;
-}
-
-header nav a:hover {
-    color: #ffcc00; /* Add hover effect for better interaction */
 }
 
 /* Content Grid Layout */
@@ -532,38 +361,6 @@ header nav a:hover {
     color: white;
 }
 
-/* Header Content */
-.header-content {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    text-align: center;
-}
-
-.header-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.title-container h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: white;
-}
-
 .social-links {
     display: flex;
     gap: 1rem;
@@ -579,17 +376,22 @@ header nav a:hover {
     color: #ffd700;
 }
 
-/* Footer Content */
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     gap: 1rem;
-    text-align: center;
-}
-
-/* Weather Section */
-#current-weather {
     text-align: center;
 }
 
@@ -599,101 +401,92 @@ header nav a:hover {
     gap: 1rem;
 }
 
-/* Directory Page Specific Styles */
-.directory-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.view-toggle button {
+.spotlight-card {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: white;
-    color: #005bb7;
-    border: 2px solid #005bb7;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    gap: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.view-toggle button:hover,
-.view-toggle button.active {
-    background-color: #005bb7;
-    color: white;
-}
-
-.view-toggle button i {
-    font-size: 1.2rem;
-}
-
-/* Update member card styles */
-.member-card {
-    background: white;
+.spotlight-card img {
+    max-width: 150px;
+    height: auto;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
-.member-card:hover {
-    transform: translateY(-5px);
+.spotlight-content {
+    flex: 1;
 }
 
-#member-list.grid {
+.spotlight-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.spotlight-content p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    grid-column: 1 / 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.sidebar-content {
+    margin-bottom: 1.5rem;
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
 }
 
-#member-list.list .member-card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
+/* Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
 }
 
-#member-list.list .member-card img {
-    width: 100px;
-    height: 100px;
+.image-gallery img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    margin-right: 1.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .view-toggle {
-        flex-direction: column;
-        align-items: stretch;
-    }
+/* Lazy Load */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    .view-toggle button {
-        width: 100%;
-        justify-content: center;
-    }
+img[data-src].loaded {
+    opacity: 1;
+}
 
-    #member-list.grid {
-        grid-template-columns: 1fr;
-    }
-
-    #member-list.list .member-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #member-list.list .member-card img {
-        margin: 0 0 1rem 0;
-    }
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Weather Styles */
@@ -765,19 +558,6 @@ header nav a:hover {
 .forecast-day .desc {
     text-transform: capitalize;
     color: #666;
-}
-
-/* Spotlight Styles */
-.spotlight-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.spotlight-card:hover {
-    transform: translateY(-5px);
 }
 
 .spotlight-header {
@@ -856,8 +636,84 @@ header nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Media Queries */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    .hero-text {
+        padding: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-column: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .view-toggle {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-toggle button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #member-list.grid {
+        grid-template-columns: 1fr;
+    }
+
+    #member-list.list .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .weather-current {
         flex-direction: column;
         text-align: center;
@@ -880,5 +736,28 @@ header nav a:hover {
         position: static;
         display: inline-block;
         margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
     }
 }
