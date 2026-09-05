@@ -8,7 +8,7 @@
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="image/logo.png">
+    <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="index.html">
     <title>Lagos Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
@@ -45,7 +45,6 @@
                 <p>Join Lagos's premier business network and unlock opportunities for growth, networking, and business development.</p>
                 <div class="cta-container">
                     <a href="join.html" class="cta-button">Join the Chamber Today</a>
-                    <a href="discover.html" class="secondary-cta">Discover More</a>
                 </div>
             </div>
         </section>
@@ -100,14 +99,6 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.getElementById('nav-menu').classList.toggle('show');
         });
-
-        // Add active class to current page link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelector(`nav a[href="${currentPage}"]`)?.classList.add('active');
-        });
     </script>
 </body>
-
 </html>
-
