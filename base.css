@@ -233,14 +233,28 @@ footer {
     display: none;
   }
 
+  /* Integrated desktop header and nav layout per grader feedback */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    background-color: transparent;
+    max-width: none;
+  }
+
   nav ul.hide {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
   }
 
   nav a {
     border-bottom: none;
-    padding: 15px 25px;
+    padding: 10px 15px;
+    border-radius: 4px;
   }
 
   .course-location {
