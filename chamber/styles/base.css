@@ -9,6 +9,11 @@ body {
     transform: translateY(-5px);
 }
 
+.header-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
 #member-list.list .member-card img {
     display: none;
 }

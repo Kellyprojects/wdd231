@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/site.js" defer></script>
 </head>
 
 <body>
@@ -25,7 +28,7 @@
             <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
                 ☰
             </button>
-            <h1>Lagos Chamber of Commerce</h1>
+            <span class="header-title">Lagos Chamber of Commerce</span>
         </div>
         <nav>
             <ul id="nav-menu">
@@ -39,10 +42,11 @@
     </header>
 
     <main>
+        <h1>Home</h1>
         <!-- Hero Section -->
         <section id="hero">
             <div class="hero-overlay"></div>
-            <img src="images/Lagos-skyline.jpg" alt="Lagos City Skyline" class="hero-image">
+            <img src="images/lagos-skyline.jpg" alt="Lagos City Skyline" class="hero-image">
             <div class="hero-text">
                 <h2>Your Pathway to Professional Success in Lagos</h2>
                 <p>Join Lagos's premier business network and unlock opportunities for growth, networking, and business development.</p>
@@ -91,9 +95,5 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
-    <script src="scripts/site.js" defer></script>
 </body>
 </html>
