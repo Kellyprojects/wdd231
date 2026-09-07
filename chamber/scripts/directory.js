@@ -6,17 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastModifiedElem = document.getElementById("last-modified");
     if (lastModifiedElem) lastModifiedElem.textContent = document.lastModified;
 
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navMenu.classList.toggle('show');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-        });
-    }
-
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelector(`nav a[href="${currentPage}"]`)?.classList.add('active');
 

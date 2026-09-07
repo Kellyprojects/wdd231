@@ -1,11 +1,3 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-menuToggle?.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('show');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-});
-
 let activeTrigger;
 
 document.querySelectorAll('[data-modal]').forEach((button) => {
