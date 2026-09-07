@@ -6,17 +6,21 @@
     <meta name="description" content="Explore upcoming events and networking chances with the Lagos Chamber of Commerce.">
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Events - Lagos Chamber of Commerce">
+    <meta property="og:description" content="Find upcoming networking and business events hosted by the Lagos Chamber of Commerce.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:image" content="images/logo.jpg">
     <meta property="og:url" content="events.html">
     <title>Events - Lagos Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <h1>Upcoming Events</h1>
+        <div class="header-content">
+            <h1>Upcoming Events</h1>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+        </div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -39,10 +43,7 @@
         <p>Last modified: <span id="last-modified"></span></p>
         <p>Developed by Emmanuel Kelikume, WDD231</p>
     </footer>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
+    <script src="scripts/site.js" defer></script>
 </body>
 </html>
 

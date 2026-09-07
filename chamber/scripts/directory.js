@@ -11,9 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const navMenu = document.getElementById('nav-menu');
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
+            const isOpen = navMenu.classList.toggle('show');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
     }
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelector(`nav a[href="${currentPage}"]`)?.classList.add('active');
 
     // Directory members fetching and rendering
     const memberList = document.getElementById("member-list");
@@ -48,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3>${member.name}</h3>
                     <p>${member.address}</p>
                     <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Website</a>
+                    <a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a>
                     <p class="membership-level">${member.membershipLevel}</p>
                 `;
                 memberList.appendChild(card);

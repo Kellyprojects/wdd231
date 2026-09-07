@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lagos Chamber of Commerce - Your Pathway to Professional Connections. Become a part of our community to engage, expand, and thrive.">
-    <meta name="author" content="Emmauel Kelikume">
+    <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Images/logo.png">
+    <meta property="og:description" content="Thank you for joining the Lagos Chamber of Commerce.">
+    <meta property="og:image" content="images/logo.jpg">
     <meta property="og:url" content="thankyou.html">
     <title>Thank You for Joining</title>
     <link rel="stylesheet" href="styles/base.css">
@@ -17,12 +18,17 @@
 
 <body>
     <header>
-        <h1>Lagos Chamber of Commerce</h1>
+        <div class="header-content">
+            <h1>Lagos Chamber of Commerce</h1>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+        </div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -52,25 +58,8 @@
         <p>Developed by Emmanuel Kelikume</p>
     </footer>
 
-    <script>
-
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Set the data from the URL parameters
-        document.getElementById('first-name').textContent = getQueryParameter('first_name');
-        document.getElementById('last-name').textContent = getQueryParameter('last_name');
-        document.getElementById('email').textContent = getQueryParameter('email');
-        document.getElementById('phone').textContent = getQueryParameter('phone');
-        document.getElementById('organization-name').textContent = getQueryParameter('organization');
-        document.getElementById('timestamp').textContent = getQueryParameter('timestamp');
-
-        // Dynamically display current year and last modified date
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/site.js" defer></script>
 </body>
 
 </html>

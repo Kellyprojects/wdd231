@@ -1,10 +1,7 @@
 // scripts/weather.js
-document.addEventListener('DOMContentLoaded', () => {
-    const weatherSection = document.getElementById('weather');
-    const forecastSection = document.getElementById('weather-forecast');
-    
-    // Replace 'the_API_KEY' with actual API key
-    const apiKey = '019051a93d167cced4a106c06867004c';
+const weatherSection = document.getElementById('current-weather');
+const forecastSection = document.getElementById('weather-forecast');
+    const apiKey = 'ce214f729a70551b8c4ef268a2517a52';
     const city = 'Lagos'; // Change this to desired location
     const units = 'metric'; // Use 'imperial' for Fahrenheit
 
@@ -15,13 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Weather data not available');
             
             const data = await response.json();
-            weatherSection.innerHTML = `
-                <h2>Weather Information</h2>
-                <p>Current Temperature in ${data.name}: ${data.main.temp}°C</p>
-                <p>Weather: ${data.weather[0].description}</p>
-            `;
+            weatherSection.innerHTML = `<p><strong>${Math.round(data.main.temp)}°C</strong></p><p>${data.weather[0].description}</p>`;
         } catch (error) {
-            weatherSection.innerHTML = `<p>Error loading weather: ${error.message}</p>`;
+            weatherSection.innerHTML = '<p>Weather data is temporarily unavailable.</p>';
         }
     }
 
@@ -32,26 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Forecast data not available');
             
             const data = await response.json();
-            let forecastHTML = '<h2>5-Days Weather Forecast</h2><ul>';
-            for (let i = 0; i < data.list.length; i += 8) { // 8 entries per day
+            let forecastHTML = '<h4>Three-day forecast</h4><ul class="forecast-list">';
+            for (let i = 0; i < 3; i += 1) {
+                const forecast = data.list[i * 8];
                 forecastHTML += `
                     <li>
-                        Date: ${data.list[i].dt_txt}<br>
-                        Temp: ${data.list[i].main.temp}°C<br>
-                        Weather: ${data.list[i].weather[0].description}
+                        <strong>${new Date(forecast.dt * 1000).toLocaleDateString(undefined, { weekday: 'short' })}</strong>
+                        <span>${Math.round(forecast.main.temp)}°C</span>
                     </li>
                 `;
             }
             forecastHTML += '</ul>';
             forecastSection.innerHTML = forecastHTML;
         } catch (error) {
-            forecastSection.innerHTML = `<p>Error loading forecast: ${error.message}</p>`;
+            forecastSection.innerHTML = '<p>Forecast data is temporarily unavailable.</p>';
         }
     }
 
     // Call the functions
-    fetchWeather();
-    fetchForecast();
-});
+fetchWeather();
+fetchForecast();
 
 

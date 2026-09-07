@@ -6,17 +6,21 @@
     <meta name="description" content="Explore upcoming events and networking chances with the Lagos Chamber of Commerce.">
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Contact - Lagos Chamber of Commerce">
+    <meta property="og:description" content="Contact the Lagos Chamber of Commerce for business support and networking information.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="image/logo.png">
+    <meta property="og:image" content="images/logo.jpg">
     <meta property="og:url" content="contact.html">
     <title>Contact Us - Lagos Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <div class="header-content">
+            <h1>Contact Us</h1>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+        </div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -47,12 +51,8 @@
         <p>Last modified: <span id="last-modified"></span></p>
         <p>Developed by Emmanuel Kelikume, WDD231</p>
     </footer>
-    <script>
-        document.getElementById("last-modified").textContent = document.lastModified;
-    </script>
-    
-    <!-- Scripts -->
-    <script src="scripts/contact.js"></script>
+    <script src="scripts/contact.js" defer></script>
+    <script src="scripts/site.js" defer></script>
 </body>
 </html>
 

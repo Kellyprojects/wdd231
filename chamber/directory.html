@@ -6,20 +6,20 @@
     <meta name="description" content="Explore upcoming events and networking chances with the Lagos Chamber of Commerce.">
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Directory - Lagos Chamber of Commerce">
+    <meta property="og:description" content="Browse businesses and connect with members of the Lagos Chamber of Commerce.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="chamber/image/logo.png">
+    <meta property="og:image" content="images/logo.jpg">
     <meta property="og:url" content="directory.html">
     <title>Directory - Lagos Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Lagos Chamber of Commerce Directory</h1>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
+                <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                ☰
             </button>
         </div>
         <nav>
@@ -38,13 +38,13 @@
                 <h2>Our Members</h2>
                 <div class="view-toggle">
                     <button id="grid-view-btn" class="secondary-cta">
-                        <i class="fas fa-th"></i> Grid View
+                        Grid View
                     </button>
                     <button id="list-view-btn" class="secondary-cta">
-                        <i class="fas fa-list"></i> List View
+                        List View
                     </button>
                 </div>
-                <section id="member-list" class="grid"></section>
+                <div id="member-list" class="grid"></div>
             </section>
         </div>
     </main>
@@ -59,23 +59,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="scripts/directory.js"></script>
-    <script>
-        // Update copyright year and last modified date
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav-menu').classList.toggle('show');
-        });
-
-        // Add active class to current page link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelector(`nav a[href="${currentPage}"]`)?.classList.add('active');
-        });
-    </script>
+    <script src="scripts/directory.js" defer></script>
 </body>
 </html>
 

@@ -1,27 +1,30 @@
-// Function to check and display visitor message based on localStorage
-window.addEventListener('load', function() {
-    const visitorMessage = document.getElementById('visitor-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const currentDate = new Date();
-    const lastVisitDate = new Date(parseInt(lastVisit));
+import { places } from '../data/discover.mjs';
 
-    if (!lastVisit) {
-        // First time visitor
-        visitorMessage.textContent = "Welcome! Feel free to reach out if you need any assistance.";
-    } else {
-        const timeDifference = currentDate - lastVisitDate;
-        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+const cardContainer = document.getElementById('discover-cards');
+const visitorMessage = document.getElementById('visitor-message');
+const lastVisit = Number(localStorage.getItem('lastVisit'));
+const now = Date.now();
 
-        if (daysDifference === 0) {
-            visitorMessage.textContent = "Glad to be back! How can I assist you today?";
-        } else if (daysDifference === 1) {
-            visitorMessage.textContent = `You last visited 3 days ago.`;
-        } else {
-            visitorMessage.textContent = `You last visited ${daysDifference} days ago.`;
-        }
-    }
+if (!lastVisit) {
+    visitorMessage.textContent = 'Welcome! Let us know if you have any questions.';
+} else {
+    const days = Math.floor((now - lastVisit) / 86400000);
+    visitorMessage.textContent = days === 0
+        ? 'Back so soon! Awesome!'
+        : `You last visited ${days} ${days === 1 ? 'day' : 'days'} ago.`;
+}
+localStorage.setItem('lastVisit', String(now));
 
-    // Store the current visit date
-    localStorage.setItem('lastVisit', Date.now().toString());
-});
+cardContainer.innerHTML = places.map((place) => `
+    <article class="discover-card">
+        <h2>${place.name}</h2>
+        <figure><img src="${place.image}" alt="${place.name}" loading="lazy" width="300" height="200"></figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button type="button">Learn More</button>
+    </article>
+`).join('');
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
 

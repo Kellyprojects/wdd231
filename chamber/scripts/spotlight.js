@@ -6,8 +6,8 @@ async function loadSpotlights() {
         if (!response.ok) throw new Error('Failed to fetch member data');
         
         const members = await response.json();
-        const goldSilverMembers = members.filter(member => 
-            member.level === 'Gold' || member.level === 'Silver'
+        const goldSilverMembers = members.filter(member =>
+            /gold|silver/i.test(member.membershipLevel)
         );
 
         if (goldSilverMembers.length === 0) {
@@ -23,16 +23,16 @@ async function loadSpotlights() {
         spotlightContainer.innerHTML = selectedMembers.map(member => `
             <div class="spotlight-card">
                 <div class="spotlight-header">
-                    <img src="${member.logo}" alt="${member.name} Logo" class="member-logo">
-                    <span class="membership-badge ${member.level.toLowerCase()}">${member.level} Member</span>
+                    <img src="${member.image}" alt="${member.name} logo" class="member-logo" loading="lazy" width="150" height="150">
+                    <span class="membership-badge ${member.membershipLevel.split(' ')[0].toLowerCase()}">${member.membershipLevel}</span>
                 </div>
                 <div class="spotlight-content">
                     <h4>${member.name}</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> ${member.phone}</p>
-                        <p><i class="fas fa-map-marker-alt"></i> ${member.address}</p>
-                        <a href="${member.website}" target="_blank" class="website-link">
-                            <i class="fas fa-globe"></i> Visit Website
+                        <p>${member.phone}</p>
+                        <p>${member.address}</p>
+                        <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="website-link">
+                            Visit Website
                         </a>
                     </div>
                 </div>

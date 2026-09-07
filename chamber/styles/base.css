@@ -761,3 +761,145 @@ img[data-src].loaded {
         font-size: 1rem;
     }
 }
+
+/* Shared assignment refinements */
+.forecast-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.forecast-list li {
+    display: grid;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+#membership-form label {
+    display: block;
+    margin: 0.75rem 0;
+}
+
+#membership-form input,
+#membership-form select,
+#membership-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+#membership-details {
+    display: grid;
+    gap: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.modal.open {
+    display: grid;
+}
+
+.modal-content {
+    max-width: 32rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    color: #222222;
+}
+
+#membership-details .card {
+    animation: reveal-card 700ms ease both;
+}
+
+#membership-details .card:nth-of-type(2) { animation-delay: 100ms; }
+#membership-details .card:nth-of-type(3) { animation-delay: 200ms; }
+#membership-details .card:nth-of-type(4) { animation-delay: 300ms; }
+
+@keyframes reveal-card {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.visitor-message {
+    padding: 1rem;
+    background: #ffffff;
+    border-left: 0.3rem solid #005bb7;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "one two"
+        "three four"
+        "five six"
+        "seven eight";
+}
+
+.discover-card {
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.discover-card:nth-child(1) { grid-area: one; }
+.discover-card:nth-child(2) { grid-area: two; }
+.discover-card:nth-child(3) { grid-area: three; }
+.discover-card:nth-child(4) { grid-area: four; }
+.discover-card:nth-child(5) { grid-area: five; }
+.discover-card:nth-child(6) { grid-area: six; }
+.discover-card:nth-child(7) { grid-area: seven; }
+.discover-card:nth-child(8) { grid-area: eight; }
+
+.discover-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (min-width: 641px) {
+    .discover-grid {
+        grid-template-areas:
+            "one one two"
+            "three four four"
+            "five six seven"
+            "eight eight seven";
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas:
+            "one two three four"
+            "five six seven eight";
+    }
+
+    .discover-card:hover img {
+        filter: saturate(1.2);
+        transform: scale(1.03);
+        transition: transform 180ms ease, filter 180ms ease;
+    }
+}
+
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven"
+            "eight";
+    }
+}

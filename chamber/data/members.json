@@ -3,56 +3,56 @@
     "name": "Lagos Tech Hub",
     "address": "15 Marina Road, Lagos Island, Lagos",
     "phone": "+234 800 123 4567",
-    "website": "https://www.example.com",
-    "image": "images/lagtech.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Lagos+Tech+Hub+Lagos",
+    "image": "images/lagtech.jpg",
     "membershipLevel": "Gold Level"
   },
   {
     "name": "Naija Web Solutions",
     "address": "42 Allen Avenue, Ikeja, Lagos",
     "phone": "+234 801 234 5678",
-    "website": "https://www.example.com",
-    "image": "images/naija.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Naija+Web+Solutions+Ikeja+Lagos",
+    "image": "images/naija.jpg",
     "membershipLevel": "Silver Level"
   },
   {
     "name": "Eko Logistics",
     "address": "10 Apapa Expressway, Apapa, Lagos",
     "phone": "+234 802 345 6789",
-    "website": "https://www.example.com",
-    "image": "images/eko.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Eko+Logistics+Apapa+Lagos",
+    "image": "images/eko.jpg",
     "membershipLevel": "Bronze Level"
   },
   {
     "name": "Victoria Island Ventures",
     "address": "78 Ahmadu Bello Way, Victoria Island, Lagos",
     "phone": "+234 803 456 7890",
-    "website": "https://www.example.com",
-    "image": "images/victoria.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Victoria+Island+Ventures+Lagos",
+    "image": "images/victoria.jpg",
     "membershipLevel": "Gold Level"
   },
   {
     "name": "Ikeja Digital Media",
     "address": "22 Obafemi Awolowo Way, Ikeja, Lagos",
     "phone": "+234 804 567 8901",
-    "website": "https://www.example.com",
-    "image": "images/ikeja.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Ikeja+Digital+Media+Lagos",
+    "image": "images/ikeja.jpg",
     "membershipLevel": "Silver Level"
   },
   {
     "name": "Lekki Creative Agency",
     "address": "5 Lekki Expressway, Lekki Phase 1, Lagos",
     "phone": "+234 805 678 9012",
-    "website": "https://www.example.com",
-    "image": "images/lekki.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Lekki+Creative+Agency+Lagos",
+    "image": "images/lekki.jpg",
     "membershipLevel": "Bronze Level"
   },
   {
     "name": "Surulere Commerce Group",
     "address": "34 Adeniran Ogunsanya St, Surulere, Lagos",
     "phone": "+234 806 789 0123",
-    "website": "https://www.example.com",
-    "image": "images/surulere.png",
+    "website": "https://www.google.com/maps/search/?api=1&query=Surulere+Commerce+Group+Lagos",
+    "image": "images/surulere.jpg",
     "membershipLevel": "Gold Level"
   }
 ]

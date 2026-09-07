@@ -8,19 +8,19 @@
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:description" content="Connect, grow, and thrive with the Lagos Chamber of Commerce business community.">
+    <meta property="og:image" content="images/logo.jpg">
     <meta property="og:url" content="index.html">
     <title>Lagos Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                ☰
             </button>
             <h1>Lagos Chamber of Commerce</h1>
         </div>
@@ -66,6 +66,7 @@
                 <div id="current-weather">
                     <p>Loading current weather...</p>
                 </div>
+                <div id="weather-forecast" aria-live="polite"></div>
             </section>
 
             <!-- Spotlight Section -->
@@ -88,17 +89,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlight.js"></script>
-    <script>
-        // Update copyright year and last modified date
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav-menu').classList.toggle('show');
-        });
-    </script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </body>
 </html>
