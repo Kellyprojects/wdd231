@@ -111,6 +111,15 @@ header ul li a:hover {
     gap: 1.5rem;
 }
 
+/* Recipes List & Cards */
+#recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.recipe,
 .featured-recipes .recipe {
     background: #fff;
     border: 1px solid #ddd;
@@ -120,42 +129,32 @@ header ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+.recipe:hover,
 .featured-recipes .recipe:hover {
     transform: translateY(-5px);
 }
 
+.recipe img,
 .featured-recipes img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
 
+.recipe h3,
+.recipe h2,
 .featured-recipes h3 {
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
-    color: #003366; /* Blue for the recipe title */
+    color: #003366; /* Blue for recipe titles */
 }
 
+.recipe p,
 .featured-recipes p {
     padding: 0 1rem 1rem;
     font-size: 0.9rem;
     color: #555;
-}
-
-/* Recipes List */
-#recipe-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-}
-
-.recipe {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .recipe-details,
@@ -206,29 +205,6 @@ dialog {
 
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.55);
-}
-
-.recipe:hover {
-    transform: translateY(-5px);
-}
-
-.recipe img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.recipe h3 {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    color: #003366; /* Blue for the recipe title */
-}
-
-.recipe p {
-    padding: 0 1rem 1rem;
-    font-size: 0.9rem;
-    color: #555;
 }
 
 /* Form Styles */
@@ -328,6 +304,5 @@ footer a:hover {
 .content {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background for content */
     border-radius: 10px;
 }

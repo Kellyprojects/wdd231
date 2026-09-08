@@ -6,8 +6,9 @@
     <meta name="description" content="Confirmation page for Nutritious Bites Collection contact submissions.">
     <meta name="author" content="Emmanuel Kelikume">
     <title>Message Received - Nutritious Bites Collection</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header><nav aria-label="Main navigation"><a href="index.html" class="logo">Nutritious Bites Collection</a></nav></header>
@@ -17,7 +18,15 @@
         <dl id="submitted-data"></dl>
         <a class="button-link" href="index.html">Return Home</a>
     </main>
-    <footer><p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p><p>Last modified: <span id="last-modified"></span></p><p><a href="attributions.html">Attributions</a></p></footer>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p><a href="attributions.html">Attributions</a></p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
     <script type="module">
         import { setPageMeta } from './scripts/module.js';
         setPageMeta();

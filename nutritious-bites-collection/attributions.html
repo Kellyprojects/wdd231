@@ -6,8 +6,9 @@
     <meta name="description" content="Sources and attributions for Nutritious Bites Collection content and images.">
     <meta name="author" content="Emmanuel Kelikume">
     <title>Attributions - Nutritious Bites Collection</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header><nav aria-label="Main navigation"><a href="index.html" class="logo">Nutritious Bites Collection</a></nav></header>
@@ -20,7 +21,15 @@
             <li>Recipe inspiration: general healthy cooking concepts; no source text is reproduced.</li>
         </ul>
     </main>
-    <footer><p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p><p>Last modified: <span id="last-modified"></span></p><p><a href="index.html">Home</a></p></footer>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p><a href="index.html">Home</a></p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
     <script type="module">
         import { setPageMeta } from './scripts/module.js';
         setPageMeta();
