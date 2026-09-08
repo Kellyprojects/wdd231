@@ -49,7 +49,7 @@ header .logo {
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
-    color: #0ccb92f5; /* Green color for the logo */
+    color: #0ccb92; /* Corrected from 8-digit hex #0ccb92f5 for W3C CSS validation compliance */
 }
 
 header ul {
@@ -263,7 +263,7 @@ footer p {
 }
 
 footer a {
-    color: #0ccb92f5; /* Green for footer links */
+    color: #0ccb92; /* Corrected from 8-digit hex #0ccb92f5 */
     text-decoration: none;
 }
 
