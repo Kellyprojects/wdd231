@@ -1,14 +1,17 @@
 [
-    {
-        "title": "Vegetarian Pasta",
-        "description": "A delicious vegetarian pasta recipe.",
-        "type": "vegetarian",
-        "image": "images/vegetarian-pasta.jpg"
-    },
-    {
-        "title": "Gluten-Free Bread",
-        "description": "Light and fluffy bread without gluten.",
-        "type": "gluten-free",
-        "image": "images/gluten-free.jpeg"
-    }
+  {"title":"Vegetarian Pasta","description":"Whole-grain pasta with tomatoes, spinach, and herbs.","type":"vegetarian","time":"25 minutes","calories":420,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Gluten-Free Bread","description":"Light, seeded bread made without gluten.","type":"gluten-free","time":"55 minutes","calories":180,"image":"images/gluten-free.jpeg"},
+  {"title":"Chickpea Salad","description":"Crunchy chickpeas, cucumber, herbs, and lemon dressing.","type":"vegetarian","time":"15 minutes","calories":310,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Berry Oat Bowl","description":"Creamy oats topped with berries, seeds, and yogurt.","type":"vegetarian","time":"10 minutes","calories":290,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Quinoa Stuffed Peppers","description":"Colorful peppers filled with quinoa, beans, and vegetables.","type":"gluten-free","time":"45 minutes","calories":360,"image":"images/gluten-free.jpeg"},
+  {"title":"Lentil Soup","description":"A warming soup with lentils, carrots, tomatoes, and spices.","type":"gluten-free","time":"40 minutes","calories":270,"image":"images/gluten-free.jpeg"},
+  {"title":"Avocado Toast","description":"Whole-grain toast with avocado, lime, and pumpkin seeds.","type":"vegetarian","time":"8 minutes","calories":250,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Sweet Potato Tacos","description":"Roasted sweet potato tacos with cabbage and lime crema.","type":"vegetarian","time":"35 minutes","calories":390,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Coconut Chia Pudding","description":"Make-ahead chia pudding with coconut milk and mango.","type":"gluten-free","time":"10 minutes","calories":220,"image":"images/gluten-free.jpeg"},
+  {"title":"Brown Rice Bowl","description":"Brown rice with roasted vegetables and tahini sauce.","type":"gluten-free","time":"30 minutes","calories":440,"image":"images/gluten-free.jpeg"},
+  {"title":"Green Smoothie","description":"A fresh blend of spinach, banana, apple, and ginger.","type":"vegetarian","time":"5 minutes","calories":190,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Black Bean Chili","description":"Hearty black beans, tomatoes, corn, and warming spices.","type":"gluten-free","time":"35 minutes","calories":330,"image":"images/gluten-free.jpeg"},
+  {"title":"Greek Salad","description":"Tomatoes, cucumber, olives, herbs, and feta cheese.","type":"vegetarian","time":"12 minutes","calories":280,"image":"images/vegetarian-pasta.jpg"},
+  {"title":"Almond Energy Bites","description":"No-bake bites with oats, almond butter, dates, and seeds.","type":"gluten-free","time":"20 minutes","calories":160,"image":"images/gluten-free.jpeg"},
+  {"title":"Vegetable Frittata","description":"Baked eggs with peppers, spinach, onions, and herbs.","type":"gluten-free","time":"30 minutes","calories":340,"image":"images/gluten-free.jpeg"}
 ]

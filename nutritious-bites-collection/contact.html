@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content=" Nutritious Bites Collection - This platform is dedicated to featuring a variety of wholesome recipes.">
+    <meta name="description" content="Contact Nutritious Bites Collection with recipe questions, healthy cooking suggestions, or feedback about the site.">
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Nutritious Bites Collection">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
-    <meta property="og:url" content="https://kellyprojects.github.io/wdd231/nutritious-bites_collection/contact.html">
-    <title>Contact us - Nutritious Bites Collection</title>
+    <meta property="og:description" content="Send feedback and healthy recipe suggestions to Nutritious Bites Collection.">
+    <meta property="og:image" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/images/favicon.png">
+    <meta property="og:url" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/contact.html">
+    <title>Contact - Nutritious Bites Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html" class="logo">Nutritious Bites Collection</a>
-            <ul>
+            <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">☰</button>
+            <ul id="site-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -28,15 +32,18 @@
     </header>
     <main>
         <h1>Contact Us</h1>
-        <form id="contact-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+        <form id="contact-form" action="action.html" method="get">
+            <label for="name">Your Name:
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </label>
             
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Your Email:
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </label>
             
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message:
+                <textarea id="message" name="message" required></textarea>
+            </label>
             
             <button type="submit">Submit</button>
         </form>
@@ -46,11 +53,8 @@
         <p>Last modified: <span id="last-modified"></span></p>
         <p>Developed by Emmanuel Kelikume, WDD231</p>
         <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
+        <p><a href="attributions.html">Attributions</a></p>
     </footer>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
-    <script src="scripts/form.js"></script>
+    <script src="scripts/form.js" type="module"></script>
 </body>
 </html>
