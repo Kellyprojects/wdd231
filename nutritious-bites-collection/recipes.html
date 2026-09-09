@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse 15 nutritious recipes and filter them by dietary type, including vegetarian and gluten-free meal ideas.">
     <meta name="author" content="Emmanuel Kelikume">
-    <meta property="og:title" content="Nutritious Bites Collection">
+    <meta property="og:title" content="Recipes | Nutritious Bites Collection Meal Ideas">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Browse healthy recipes with ingredients, preparation times, and dietary information.">
+    <meta property="og:description" content="Browse healthy recipes with ingredients, preparation times, and dietary information for every meal.">
     <meta property="og:image" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/images/favicon.png">
     <meta property="og:url" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/recipes.html">
     <title>Recipes - Nutritious Bites Collection</title>
@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/recipe.js" type="module" defer></script>
 </head>
+
 <body>
     <header>
         <nav aria-label="Main navigation">
@@ -33,7 +35,8 @@
     </header>
     <main>
         <h1>All Recipes</h1>
-        <select id="filter" aria-label="Filter recipes">
+        <label for="filter">Filter recipes</label>
+        <select id="filter">
             <option value="all">All</option>
             <option value="vegetarian">Vegetarian</option>
             <option value="gluten-free">Gluten-Free</option>
@@ -47,10 +50,6 @@
         <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
-    <script src="scripts/recipe.js" type="module"></script>
 </body>
+
 </html>

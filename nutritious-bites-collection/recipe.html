@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Nutritious Bites Collection with recipe questions, healthy cooking suggestions, or feedback about the site.">
+    <meta name="description" content="Browse 15 nutritious recipes and filter them by dietary type, including vegetarian and gluten-free meal ideas.">
     <meta name="author" content="Emmanuel Kelikume">
-    <meta property="og:title" content="Contact | Nutritious Bites Collection Feedback">
+    <meta property="og:title" content="Recipes | Nutritious Bites Collection Meal Ideas">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Send feedback and healthy recipe suggestions to Nutritious Bites Collection. We welcome your cooking ideas.">
+    <meta property="og:description" content="Browse healthy recipes with ingredients, preparation times, and dietary information for every meal.">
     <meta property="og:image" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/images/favicon.png">
-    <meta property="og:url" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/contact.html">
-    <title>Contact - Nutritious Bites Collection</title>
+    <meta property="og:url" content="https://kellyprojects.github.io/wdd231/nutritious-bites-collection/recipe.html">
+    <title>Recipes - Nutritious Bites Collection</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.ico">
-    <script src="scripts/form.js" type="module" defer></script>
+    <script src="scripts/recipe.js" type="module" defer></script>
 </head>
 
 <body>
@@ -34,22 +34,14 @@
         </nav>
     </header>
     <main>
-        <h1>Contact Us</h1>
-        <form id="contact-form" action="action.html" method="get">
-            <label for="name">Your Name:
-                <input type="text" id="name" name="name" autocomplete="name" required>
-            </label>
-
-            <label for="email">Your Email:
-                <input type="email" id="email" name="email" autocomplete="email" required>
-            </label>
-
-            <label for="message">Your Message:
-                <textarea id="message" name="message" required></textarea>
-            </label>
-
-            <button type="submit">Submit</button>
-        </form>
+        <h1>All Recipes</h1>
+        <label for="filter">Filter recipes</label>
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="gluten-free">Gluten-Free</option>
+        </select>
+        <div id="recipe-list"></div>
     </main>
     <footer>
         <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
