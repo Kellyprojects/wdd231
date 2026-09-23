@@ -25,7 +25,7 @@ const forecastSection = document.getElementById('weather-forecast');
             if (!response.ok) throw new Error('Forecast data not available');
             
             const data = await response.json();
-            let forecastHTML = '<h4>Three-day forecast</h4><ul class="forecast-list">';
+            let forecastHTML = '<h3>Three-day forecast</h3><ul class="forecast-list">';
             for (let i = 0; i < 3; i += 1) {
                 const forecast = data.list[i * 8];
                 forecastHTML += `

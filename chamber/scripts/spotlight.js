@@ -27,7 +27,7 @@ async function loadSpotlights() {
                     <span class="membership-badge ${member.membershipLevel.split(' ')[0].toLowerCase()}">${member.membershipLevel}</span>
                 </div>
                 <div class="spotlight-content">
-                    <h4>${member.name}</h4>
+                    <h3>${member.name}</h3>
                     <div class="contact-info">
                         <p>${member.phone}</p>
                         <p>${member.address}</p>
