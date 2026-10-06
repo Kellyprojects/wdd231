@@ -48,7 +48,7 @@ export function setLastViewedRecipe(title) {
 export function recipeCardHtml(recipe, heading = 'h3') {
     return `
         <article class="recipe recipe-${recipe.type}">
-            <img src="${recipe.image}" alt="${recipe.title}" loading="lazy" width="640" height="420">
+            <img src="${recipe.image}" alt="${recipe.title}" loading="lazy" width="480" height="320">
             <${heading}>${recipe.title}</${heading}>
             <p>${recipe.description}</p>
             <p><strong>Type:</strong> ${recipe.type}</p>
