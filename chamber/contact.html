@@ -16,24 +16,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Contact Us</h1>
-            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
+            <a href="index.html" class="brand">
+                <img src="images/logo.jpg" alt="Lagos Chamber of Commerce logo" width="56" height="56">
+                <span class="header-title">Lagos Chamber of Commerce</span>
+            </a>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu" type="button">☰</button>
         </div>
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <h1>Contact Us</h1>
+        <p class="page-intro">Send a question about membership, events, or doing business in Lagos.</p>
         <form id="contact-form">
             <div>
                 <label for="name">Name:</label>
@@ -47,13 +53,15 @@
                 <label for="message">Message:</label>
                 <textarea id="message" required></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </main>
     <footer>
-        <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
-        <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Kelikume, WDD231</p>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+            <p>Developed by Emmanuel Kelikume, WDD231</p>
+        </div>
     </footer>
     <script src="scripts/contact.js" defer></script>
     <script src="scripts/site.js" defer></script>

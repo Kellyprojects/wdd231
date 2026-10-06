@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Nutritious Bites Collection</title>
     <meta name="description" content="Contact Nutritious Bites Collection with recipe questions, healthy cooking suggestions, or feedback about the site.">
-    <meta name="author" content="Emmanuel Kelikume">
+    <meta name="author" content="Emmanuel Chinedu Kelikume">
     <link rel="icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact Nutritious Bites Collection Support Page">
     <meta property="og:description" content="Send feedback and healthy recipe suggestions to Nutritious Bites Collection. We welcome your cooking ideas.">
@@ -20,14 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/form.js" type="module" defer></script>
+    <script src="scripts/form.js" type="module"></script>
 </head>
 
 <body>
     <header>
-        <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">Nutritious Bites Collection</a>
+        <div class="header-bar">
+            <a href="index.html" class="logo">Nutritious Bites</a>
             <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">☰</button>
+        </div>
+        <nav aria-label="Main navigation">
             <ul id="site-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
@@ -36,28 +36,42 @@
         </nav>
     </header>
     <main>
-        <h1>Contact Us</h1>
-        <form id="contact-form" action="action.html" method="get">
-            <label for="name">Your Name:
-                <input type="text" id="name" name="name" autocomplete="name" required>
-            </label>
-
-            <label for="email">Your Email:
-                <input type="email" id="email" name="email" autocomplete="email" required>
-            </label>
-
-            <label for="message">Your Message:
-                <textarea id="message" name="message" required></textarea>
-            </label>
-
-            <button type="submit">Submit</button>
-        </form>
+        <section class="page-banner">
+            <h1>Contact Emmanuel</h1>
+            <p>Write with a recipe question, a gluten-free swap, or a meal you want added next. I cook these dishes in Lagos and I read every message.</p>
+        </section>
+        <div class="contact-layout">
+            <aside class="info-card">
+                <h2>Emmanuel Chinedu Kelikume</h2>
+                <p>Creator of Nutritious Bites Collection · Lagos, Nigeria</p>
+                <ul>
+                    <li>Email: <a href="mailto:emmanuelkelly29@gmail.com">emmanuelkelly29@gmail.com</a></li>
+                    <li>GitHub: <a href="https://github.com/Kellyprojects" rel="noopener" target="_blank">Kellyprojects</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-chinedu-kelikume" rel="noopener" target="_blank">Emmanuel Chinedu Kelikume</a></li>
+                </ul>
+                <p>Prefer email? Send a note about vegetarian pasta, gluten-free bread, or any recipe on this site and I will reply from Gmail.</p>
+                <p data-last-viewed></p>
+            </aside>
+            <form id="contact-form" action="action.html" method="get">
+                <label for="name">Your Name
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </label>
+                <label for="email">Your Email
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </label>
+                <label for="message">Your Message
+                    <textarea id="message" name="message" required></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Kelikume, WDD231</p>
-        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
+        <p>Created by Emmanuel Chinedu Kelikume, Lagos, Nigeria · WDD 231</p>
+        <p><a href="mailto:emmanuelkelly29@gmail.com">emmanuelkelly29@gmail.com</a></p>
+        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a" target="_blank" rel="noopener">View Project Demo Video</a></p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
 </body>

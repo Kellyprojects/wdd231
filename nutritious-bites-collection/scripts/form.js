@@ -1,4 +1,5 @@
-import { setPageMeta, setupNavigation } from './module.js';
+import { setPageMeta, setupNavigation, updateLastViewedLabels } from './module.js';
 
 setPageMeta();
 setupNavigation();
+updateLastViewedLabels();

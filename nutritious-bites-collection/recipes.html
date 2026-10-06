@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes - Nutritious Bites Collection</title>
     <meta name="description" content="Browse 15 nutritious recipes and filter them by dietary type, including vegetarian and gluten-free meal ideas.">
-    <meta name="author" content="Emmanuel Kelikume">
+    <meta name="author" content="Emmanuel Chinedu Kelikume">
     <link rel="icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Recipes from Nutritious Bites Collection Website">
     <meta property="og:description" content="Browse healthy recipes with ingredients, preparation times, and dietary information for every meal.">
@@ -20,14 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/recipe.js" type="module" defer></script>
+    <script src="scripts/recipe.js" type="module"></script>
 </head>
 
 <body>
     <header>
-        <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">Nutritious Bites Collection</a>
+        <div class="header-bar">
+            <a href="index.html" class="logo">Nutritious Bites</a>
             <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">☰</button>
+        </div>
+        <nav aria-label="Main navigation">
             <ul id="site-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
@@ -36,20 +36,38 @@
         </nav>
     </header>
     <main>
-        <h1>All Recipes</h1>
-        <label for="filter">Filter recipes</label>
-        <select id="filter">
-            <option value="all">All</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="gluten-free">Gluten-Free</option>
-        </select>
-        <div id="recipe-list"></div>
+        <section class="page-banner">
+            <h1>All Recipes</h1>
+            <p>Fifteen meals I cook and share from Lagos, each with type, time, calories, and a short description. Filter the list and this browser will remember your choice.</p>
+        </section>
+        <div class="recipes-layout">
+            <aside class="info-card">
+                <h2>Filter meals</h2>
+                <label for="filter">Show recipes by diet</label>
+                <select id="filter">
+                    <option value="all">All recipes</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                </select>
+                <p data-last-viewed></p>
+            </aside>
+            <section>
+                <h2 class="visually-hidden">Recipe collection</h2>
+                <div id="recipe-list"></div>
+            </section>
+        </div>
+        <dialog id="recipe-dialog" aria-labelledby="dialog-title">
+            <h2 id="dialog-title">Recipe Details</h2>
+            <div id="dialog-content"></div>
+            <button id="dialog-close" type="button">Close</button>
+        </dialog>
     </main>
     <footer>
         <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Kelikume, WDD231</p>
-        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
+        <p>Created by Emmanuel Chinedu Kelikume, Lagos, Nigeria · WDD 231</p>
+        <p><a href="mailto:emmanuelkelly29@gmail.com">emmanuelkelly29@gmail.com</a></p>
+        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a" target="_blank" rel="noopener">View Project Demo Video</a></p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
 </body>

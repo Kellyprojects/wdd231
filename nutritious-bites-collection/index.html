@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Nutritious Bites Collection</title>
     <meta name="description" content="Discover nutritious recipes with practical ingredients, dietary filters, and healthy meal inspiration from Nutritious Bites Collection.">
-    <meta name="author" content="Emmanuel Kelikume">
+    <meta name="author" content="Emmanuel Chinedu Kelikume">
     <link rel="icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home Page of Nutritious Bites Collection Recipes">
     <meta property="og:description" content="Explore healthy recipes and meal ideas for vegetarian and gluten-free lifestyles from Nutritious Bites.">
@@ -20,14 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/main.js" type="module" defer></script>
+    <script src="scripts/main.js" type="module"></script>
 </head>
 
 <body>
     <header>
-        <nav aria-label="Main navigation">
+        <div class="header-bar">
             <a href="index.html" class="logo">Nutritious Bites</a>
             <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">☰</button>
+        </div>
+        <nav aria-label="Main navigation">
             <ul id="site-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
@@ -37,29 +37,39 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Welcome to Nutritious Bites Collection</h1>
-            <p>Your go-to source for tasty and healthy recipes.</p>
-        </section>
-        <section class="featured-recipes">
-            <h2>Featured Recipes</h2>
-            <div id="featured-recipes-container">
-                <!-- Featured recipes loaded dynamically -->
+            <div class="hero-text">
+                <h1>Welcome to Nutritious Bites Collection</h1>
+                <p>I am Emmanuel Chinedu Kelikume, a web student in Lagos, Nigeria. These vegetarian and gluten-free meals are the kind I cook at home with everyday ingredients.</p>
+                <a class="button-link" href="recipes.html">Browse all 15 recipes</a>
             </div>
         </section>
+        <div class="home-layout">
+            <aside class="info-card">
+                <h2>From my kitchen</h2>
+                <p>Questions about a recipe? Email me at <a href="mailto:emmanuelkelly29@gmail.com">emmanuelkelly29@gmail.com</a>.</p>
+                <p data-last-viewed></p>
+                <p>Your last recipe filter is saved on this device so the Recipes page opens where you left off.</p>
+                <a class="secondary-link" href="contact.html">Send Emmanuel a message</a>
+            </aside>
+            <section class="featured-recipes">
+                <h2>Featured Recipes</h2>
+                <div id="featured-recipes-container"></div>
+            </section>
+        </div>
         <dialog id="recipe-dialog" aria-labelledby="dialog-title">
             <h2 id="dialog-title">Recipe Details</h2>
-            <p id="dialog-content"></p>
+            <div id="dialog-content"></div>
             <button id="dialog-close" type="button">Close</button>
         </dialog>
     </main>
     <footer>
         <p>&copy; <span id="current-year"></span> Nutritious Bites Collection</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Kelikume, WDD231</p>
-        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a?sid=ad91b126-fdcb-47da-97bc-58520dfbfae7" target="_blank">View Project Demo Video</a></p>
+        <p>Created by Emmanuel Chinedu Kelikume, Lagos, Nigeria · WDD 231</p>
+        <p><a href="mailto:emmanuelkelly29@gmail.com">emmanuelkelly29@gmail.com</a></p>
+        <p><a href="https://www.loom.com/share/172bdb68d99544ab9f12a8dd75ec665a" target="_blank" rel="noopener">View Project Demo Video</a></p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
 </body>
 
 </html>
-

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Lagos attractions, community places, local events, and business opportunities through the Chamber.">
+    <meta name="description" content="Discover Lagos attractions, demographics, events, and places of interest with the Lagos Chamber of Commerce.">
     <meta name="author" content="Emmanuel Kelikume">
     <meta property="og:title" content="Discover Lagos - Lagos Chamber of Commerce">
     <meta property="og:description" content="Explore places, culture, and business opportunities around Lagos.">
@@ -21,71 +21,81 @@
     <script src="scripts/site.js" defer></script>
 </head>
 <body>
- <header>
-    <div class="header-content">
-        <span class="header-title">Discover Chamber</span>
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-    </div>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="images/logo.jpg" alt="Lagos Chamber of Commerce logo" width="56" height="56">
+                <span class="header-title">Lagos Chamber of Commerce</span>
+            </a>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu" type="button">☰</button>
+        </div>
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        </header>
-        <main>
-            <h1>Discover Lagos</h1>
+    </header>
+
+    <main>
+        <div class="visitor-banner">
             <p id="visitor-message" class="visitor-message"></p>
-            <div class="sidebar-content">
-                <h2>Demographics</h2>
-                <ul>
-                    <li>Population: 750,000</li>
-                    <li>Median Age: 35 years</li>
-                    <li>Median Household Income: $60,000</li>
-                    <li>Average Education Level: College Graduate</li>
-                </ul>
-            </div>
+            <button type="button" id="visitor-close" aria-label="Dismiss visit message">Close</button>
+        </div>
 
-            <!-- Events Section -->
-            <div class="sidebar-content">
-                <h2>Upcoming Events</h2>
-                <ul>
-                    <li>Annual Chamber Gala - September 14, 2026</li>
-                    <li>Business Networking Mixer - October 7, 2026</li>
-                    <li>Local Market Day - November 17, 2026</li>
-                </ul>
-            </div>
+        <section class="discover-intro">
+            <h1>Discover Lagos</h1>
+            <p>Lagos is Nigeria’s commercial capital and West Africa’s busiest port city. Use this page to learn the facts that matter to visitors and prospective chamber members: people, places, events, and the neighborhoods where business happens.</p>
+        </section>
 
-            <!-- Attractions Section -->
-            <div class="sidebar-content">
-                <h2>Local Attractions</h2>
-                <ul>
-                    <li>Lekki Conservation Centre</li>
-                    <li>National Theatre</li>
-                    <li>Lagos Skyline</li>
-                    <li>Tafawa Balewa Square</li>
-                </ul>
-            </div>
-
-    
-                <!-- Main Content Section (Image Gallery) -->
-                <section class="main-content">
-                    <h2>Local Photos of Interest</h2>
-                    <div id="discover-cards" class="discover-grid"></div>
+        <div class="discover-layout">
+            <aside class="discover-sidebar">
+                <section class="card">
+                    <h2>Demographics</h2>
+                    <ul>
+                        <li>Population: about 16 million in Lagos State</li>
+                        <li>Median age: about 18 years</li>
+                        <li>Languages: English, Yoruba, and Nigerian Pidgin</li>
+                        <li>Key sectors: trade, finance, technology, ports, and entertainment</li>
+                    </ul>
                 </section>
-    
+                <section class="card">
+                    <h2>Upcoming Events</h2>
+                    <ul>
+                        <li>Annual Chamber Gala — September 14, 2026</li>
+                        <li>Business Networking Mixer — October 7, 2026</li>
+                        <li>Local Market Day — November 17, 2026</li>
+                    </ul>
+                    <a href="join.html" class="secondary-cta">Join before the next event</a>
+                </section>
+                <section class="card">
+                    <h2>Why Lagos</h2>
+                    <ul>
+                        <li>Largest consumer market in Nigeria</li>
+                        <li>Major seaport and aviation hub</li>
+                        <li>Growing creative and technology community</li>
+                        <li>Coastal recreation beside a dense business district</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <section class="discover-gallery">
+                <h2>Places of Interest</h2>
+                <p>Eight locations that show how people live, travel, trade, and gather in Lagos.</p>
+                <div id="discover-cards" class="discover-grid"></div>
+            </section>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
-        <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Kelikume, WDD231</p>
-        
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+            <p>Developed by Emmanuel Kelikume, WDD231</p>
+        </div>
     </footer>
 </body>
-
 </html>
